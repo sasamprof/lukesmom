@@ -1,12 +1,14 @@
 // User Entity
 
 import { UserRole } from './UserRole';
-type User = {
+import { SubscriptionStatus } from './SubscriptionStatus';
+
+export type User = {
   id: number;
   email: string;
   password: string;
   role: UserRole;
-  subscriptionStatus: 'free' | 'paid';
+  subscriptionStatus: SubscriptionStatus;
   createdAt: Date;
-  updatedAt: Date;
+  modifiedAt: Date;
 };
